@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Calcular a média final dadas as notas das 3 provas e produzir uma saída com a média e a situação
+        // do aluno de acordo com o seguinte critério: média >= 6, aprovado; média >=3 e média < 6,
+        // recuperação; média < 4, reprovado. Considerar também o número de faltas do aluno: se forem
+        // mais que sete faltas, o aluno estará automaticamente reprovado (o usuário deve fornecer o
+        // numero de faltas). Se o aluno se encontrar em recuperação, solicitar a nota da quarta prova e,
+        // após calcular a media final, informar se o aluno passou (media final >=5) ou não.
+
+        let p1 = parseFloat(prompt("Digite sua primeira nota"))
+        let p2 = parseFloat(prompt("Digite sua segunda nota"))
+        let p3 = parseFloat(prompt("Digite sua terceira nota"))
+        let faltas = parseInt(prompt("Quantas faltas você possui?"))
+        let media = (p1 + p2 + p3) / 3
+
+        if (faltas <= 7) {
+            if (media >= 6) {
+                alert(`Você foi aprovado com nota ${media}`)
+            }
+            else if (media >= 3 && media < 6) {
+                alert(`Você ficou de recuperação com nota ${media}`)
+            }
+            else {
+                alert(`Você foi reporvado com nota ${media}`)
+            }
+        }
+
+        else {
+            alert(`Você foi reprovado por faltas com nota ${media}`)
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>
