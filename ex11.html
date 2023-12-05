@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Crie uma turma com 5 alunos, exigindo nome e duas notas,
+        // e faça uma media da nota deles usando reduce
+
+        function criaraluno(nome, nota1, nota2, media){
+            return {nome, nota1, nota2, media}
+        }
+        let alunos = [
+            criaraluno("Pedro", 10, 10),
+            criaraluno("Igor", 9, 9),
+            criaraluno("José", 7, 4),
+            criaraluno("Ana", 8, 9.5),
+            criaraluno("Célia", 5, 7.5),
+            criaraluno("Catarina", 7, 4)
+        ]
+        function media(tot, alunos){
+            return ((alunos.nota1 + alunos.nota2) / 2) + tot  
+        }
+
+        let mediaReduce = alunos.reduce(media, 0)
+        let mediaTotalSala = mediaReduce / alunos.length
+
+        console.log("A media da sala foi " + mediaTotalSala)
+        
+
+    </script>
+</body>
+</html>
