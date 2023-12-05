@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Crie um grupo de pessoas com idades variadas e use o filter para mostrar as pessoas
+        // com idade ímpar 
+
+        function criarPessoa(nome, idade){
+            return {nome, idade}
+        }
+        let pessoas = [
+            criarPessoa("Pedro", 19),
+            criarPessoa("Lucia", 34),
+            criarPessoa("Márcia", 53),
+            criarPessoa("André", 22),
+            criarPessoa("Maurício", 15),
+            criarPessoa("Marcos", 25)
+        ]
+
+        function pessoasIdadeImpar(x){
+            return x.idade % 2 == 1
+        }
+        let pessoasFiltradas = pessoas.filter(pessoasIdadeImpar)
+
+        function mapearPessoas(pessoasFiltradas){
+            return pessoasFiltradas.nome + " tem idade impar: " + pessoasFiltradas.idade + " anos."
+        }
+        console.log(pessoasFiltradas.map(mapearPessoas))
+
+
+    </script>
+</body>
+</html>
