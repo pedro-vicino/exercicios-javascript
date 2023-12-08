@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function dobrar5sec(n) {
+            const promise = new Promise((res, rej) => {
+                setTimeout(() => {
+                    if (typeof n === 'number') {
+                        const resultado = n * 2
+                        res(resultado)
+                    }
+                    else {
+                        rej("O parâmetro deve ser um número")
+                    }
+                }, 3000)
+            })
+            return promise
+        }
+
+        async function asyncDobrar(x) {
+            try {
+                const r = await dobrar5sec(x)
+                console.log(`Resultado em dobro: ${r}`)
+            }
+            catch (err) {
+                console.log(`Erro: ${err}`)
+            }
+        }
+        asyncDobrar(21)
+    </script>
+</body>
+
+</html>

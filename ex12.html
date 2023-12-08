@@ -7,8 +7,8 @@
 </head>
 <body>
     <script>
-        // Crie um grupo de pessoas com idades variadas e use o filter para mostrar as pessoas
-        // com idade ímpar 
+        // Crie um grupo de pessoas com idades variadas, use o filter para filtrar as pessoas
+        // com idade ímpar e o map para imprimir
 
         function criarPessoa(nome, idade){
             return {nome, idade}
@@ -21,7 +21,6 @@
             criarPessoa("Maurício", 15),
             criarPessoa("Marcos", 25)
         ]
-
         function pessoasIdadeImpar(x){
             return x.idade % 2 == 1
         }
@@ -32,6 +31,7 @@
         }
         console.log(pessoasFiltradas.map(mapearPessoas))
 
+        
 
     </script>
 </body>
